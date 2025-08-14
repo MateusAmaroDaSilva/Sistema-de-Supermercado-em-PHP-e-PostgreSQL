@@ -34,171 +34,90 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 
 body {
-  background-color: #f8f9fa;
+  background-color: #f4f6f8;
   color: #333;
-  padding: 20px;
+  padding: 30px;
 }
 
-.container {
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.modal {
-  display: none; 
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,0.5);
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
-
-.modal-content {
-  background-color: #fff;
-  border-radius: 8px;
-  padding: 25px;
-  width: 90%;
-  max-width: 600px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
-  position: relative;
-}
-
-.modal-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-.modal-header h2 {
-  font-size: 1.5rem;
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
   color: #2c3e50;
 }
 
-.close-btn {
-  background: none;
-  border: none;
-  font-size: 1.2rem;
-  cursor: pointer;
-  color: #888;
-  transition: color 0.3s;
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 25px 30px;
+  border-radius: 10px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 
-.close-btn:hover {
-  color: #e74c3c;
-}
-
-.product-form .form-row {
-  display: flex;
-  gap: 15px;
-  margin-bottom: 15px;
-}
-
-.product-form .form-group {
-  flex: 1;
+form {
   display: flex;
   flex-direction: column;
+  gap: 15px;
 }
 
-.product-form label {
-  margin-bottom: 5px;
+form label {
   font-weight: 600;
+  margin-bottom: 5px;
   color: #555;
 }
 
-.product-form input,
-.product-form select,
-.product-form textarea {
-  padding: 10px;
-  border-radius: 5px;
+form input,
+form textarea,
+form select {
+  padding: 12px 15px;
+  border-radius: 6px;
   border: 1px solid #ccc;
-  font-size: 0.95rem;
-  transition: border-color 0.3s, box-shadow 0.3s;
+  font-size: 1rem;
+  transition: all 0.3s;
 }
 
-.product-form input:focus,
-.product-form select:focus,
-.product-form textarea:focus {
+form input:focus,
+form textarea:focus,
+form select:focus {
   border-color: #007bff;
   box-shadow: 0 0 5px rgba(0,123,255,0.3);
   outline: none;
 }
 
-.form-actions {
-  display: flex;
-  justify-content: flex-end;
-  gap: 10px;
-  margin-top: 20px;
-}
-
-.btn {
-  padding: 10px 20px;
-  border-radius: 5px;
+button[type="submit"] {
+  background-color: #007bff;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
-  border: none;
   transition: background-color 0.3s;
 }
 
-.btn-primary {
-  background-color: #007bff;
-  color: white;
-}
-
-.btn-primary:hover {
+button[type="submit"]:hover {
   background-color: #0056b3;
 }
 
-.btn-secondary {
-  background-color: #6c757d;
-  color: white;
+a {
+  display: inline-block;
+  margin-top: 15px;
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s;
 }
 
-.btn-secondary:hover {
-  background-color: #495057;
-}
-
-.btn-danger {
-  background-color: #e74c3c;
-  color: white;
-}
-
-.btn-danger:hover {
-  background-color: #c0392b;
-}
-
-.toast {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #2c3e50;
-  color: white;
-  padding: 15px 25px;
-  border-radius: 8px;
-  display: none;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-  z-index: 2000;
-}
-
-.toast.show {
-  display: block;
-  animation: slideIn 0.5s ease forwards;
-}
-
-@keyframes slideIn {
-  from { transform: translateX(100%); opacity: 0; }
-  to { transform: translateX(0); opacity: 1; }
+a:hover {
+  color: #0056b3;
 }
 
 @media (max-width: 600px) {
-  .product-form .form-row {
-    flex-direction: column;
+  .container {
+    padding: 20px;
   }
 }
+
 </style>
 <body>
   <h1>Adicionar Produto</h1>
